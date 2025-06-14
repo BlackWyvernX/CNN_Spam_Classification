@@ -18,7 +18,7 @@ def clean_text(text):
 
 def preprocess_data():
     dir = os.getcwd()
-    df = pd.read_csv(os.path.join(dir, 'spam.csv'), encoding='latin-1')
+    df = pd.read_csv(os.path.join(dir, 'code/spam.csv'), encoding='latin-1')
     df = df.iloc[:, :2] 
     df = df.dropna(axis=1, how='all')
     df.columns = ["label", "text"]
